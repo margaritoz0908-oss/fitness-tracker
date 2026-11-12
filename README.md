@@ -127,3 +127,35 @@ git push
 If you have no repository yet, create one on GitHub, add collaborators under Settings,
 and clone it before copying these files into the clone. Submit the team's repository
 URL on Canvas. Do not commit database passwords or credentials.
+
+
+## Project Check-In 1
+
+**November 11, 2026**
+
+### Project description
+
+Fitness Tracker is a PHP and MariaDB web application for browsing exercises and tracking workouts. The current version includes a working Exercise Catalog. The database also supports user accounts, workouts, and exercise logs for future features.
+
+### Current features
+
+- The Exercise Catalog uses PHP PDO to read exercise names and categories from MariaDB.
+- The catalog displays the sample record **Bench Press (Strength)** using data from the `exercises` and `exercise_categories` tables.
+
+### Database schema
+
+The database contains five tables: `users`, `exercise_categories`, `exercises`, `workouts`, and `workout_logs`. The [Mermaid ERD](#data-model) shows their relationships, and [database/schema.sql](database/schema.sql) defines the schema.
+
+The five tables match the Week 9 design. For this check-in, we added a sample category and exercise as data. Those inserts did not change the schema.
+
+### Screenshots
+
+- [Database tables in phpMyAdmin](screenshots/database-tables.png)
+- [Working Exercise Catalog and PHP–MariaDB connection](screenshots/php-mariadb-connection.png)
+
+### Progress summary
+
+- **Complete:** The database tables are set up, the PHP application connects to MariaDB, and the Exercise Catalog displays saved records.
+- **Still in progress:** The catalog is read-only. User accounts, workout logging, and workout history are still pending.
+- **Blockers or help needed:** The database login issue was resolved. Feedback on the planned workout logging workflow would help guide the next phase.
+- **Next steps:** Build the workout entry form, save workout records through PDO, and test that saved workouts appear in the history view.
